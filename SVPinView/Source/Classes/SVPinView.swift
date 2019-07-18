@@ -152,8 +152,9 @@ public class SVPinView: UIView {
 //            // delete if space
 //            password[passwordIndex] = text == " " ? "" : text
 //        } else {
-//            password.append(text)
+//
 //        }
+        password.append(text)
         validateAndSendCallback()
     }
     
