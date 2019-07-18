@@ -148,12 +148,12 @@ public class SVPinView: UIView {
         // store text
         let text =  textField.text ?? ""
         let passwordIndex = index - 1
-        if password.count > (passwordIndex) {
-            // delete if space
-            password[passwordIndex] = text == " " ? "" : text
-        } else {
-            password.append(text)
-        }
+//        if password.count > (passwordIndex) {
+//            // delete if space
+//            password[passwordIndex] = text == " " ? "" : text
+//        } else {
+//            password.append(text)
+//        }
         validateAndSendCallback()
     }
     
