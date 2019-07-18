@@ -31,7 +31,7 @@ public class SVPinView: UIView {
     fileprivate var password = [String]()
     
     // MARK: - Public Properties -
-    @IBInspectable public var pinLength:Int = 5
+    @IBInspectable public var pinLength:Int = 6
     @IBInspectable public var secureCharacter:String = "\u{25CF}"
     @IBInspectable public var interSpace:CGFloat = 5
     @IBInspectable public var textColor:UIColor = UIColor.black
