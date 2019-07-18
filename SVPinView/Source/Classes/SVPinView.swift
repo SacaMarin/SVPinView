@@ -148,13 +148,12 @@ public class SVPinView: UIView {
         // store text
         let text =  textField.text ?? ""
         let passwordIndex = index - 1
-//        if password.count > (passwordIndex) {
-//            // delete if space
-//            password[passwordIndex] = text == " " ? "" : text
-//        } else {
-//
-//        }
-        password.append(text)
+        if password.count > (passwordIndex) {
+            // delete if space
+            password[passwordIndex] = text == " " ? "" : text
+        } else {
+            password.append(text)
+        }
         validateAndSendCallback()
     }
     
@@ -243,7 +242,7 @@ public class SVPinView: UIView {
         password = []
         for (index,char) in pin.enumerated() {
             
-            guard index < pinLength else { return }
+            guard index <= pinLength else { return }
             
             //Get the first textField
             let textField = collectionView.cellForItem(at: IndexPath(item: index, section: 0))?.viewWithTag(101 + index) as! SVPinField
